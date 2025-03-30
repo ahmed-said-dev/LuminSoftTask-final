@@ -1,0 +1,39 @@
+@font-face {
+    font-family:"Tajawal-Medium";
+    src: url(../assets/fonts/ar/arabic-medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family:"Tajawal-Bold";
+    src: url(../assets/fonts/ar/arabic-bold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family:"Cabin-Bold";
+    src: url(../assets/fonts/en/english-bold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family:"Cabin-Medium";
+    src: url(../assets/fonts/en/english-medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family:"Cabin-Regular";
+    src: url(../assets/fonts/en/english-regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }

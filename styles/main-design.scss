@@ -1,0 +1,351 @@
+@import './variables.scss';
+@import'./mixins.scss'  ;
+@import './font_face.scss' ;
+
+// Normailzation
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+//******************** HERO 
+.hero-bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $primaryColor;
+
+    .patter-white{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    // Start NavBar
+    .navbar-brand{
+        margin: 0;
+        // Company LOGO
+        .logo{
+            width: 106px;
+            height: 44px;
+        }
+
+    }
+    .navbar-nav{
+        justify-content: space-between;
+        gap: 25px;
+        &.ms-5s{
+           
+            @include rtl_value(margin-left, 20px, 0);
+            @include rtl_value(margin-right, 0, 20px);
+            @include mediaQuery ($xxl){
+            @include rtl_value(margin-left, 80px, 0);
+            @include rtl_value(margin-right, 0, 80px);
+            }
+        }
+        .nav-item{
+            .nav-link{
+                color: $primaryColor;
+                position: relative;
+                padding: 10px 0;
+                @include mediaQuery ($xxl){
+                padding: 8px 0;
+                color: #fff;
+                position: relative;
+                }
+                @include font(20px,Cabin-Regular , Tajawal-Medium,24px);
+                // @include font(20px,500,Cabin-Medium,24px,rtl);
+                &.active , &:hover{
+                    &::after{
+                        content: "";
+                            position: absolute;
+                            bottom: -4px;
+                            width: 20px;
+                            height: 4px;
+                            border-radius: 2px;
+                            @include rtl_value(left, 0 , auto);
+                             @include rtl_value(right, auto , 0);
+                            background-color: $activeColor;
+                        @include mediaQuery($xxl){
+                            content: "";
+                            position: absolute;
+                            bottom: -4px;
+                            width: 20px;
+                            height: 4px;
+                            border-radius: 2px;
+                            @include rtl_value(left, 50%, auto);
+                            @include rtl_value(transform, translate(-50%) , 0);
+                            @include rtl_value(right, auto, 50%); 
+                            @include rtl_value(transform, 0,translate(50%));
+                            background-color: $activeColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Right Side Buttons
+    .actions{
+        margin-top: 45px;
+        @include mediaQuery($xxl){
+            margin-top: 0;
+        }
+        .btns-actions{
+            button{
+                border: none;
+                outline: none;
+                border-radius: 20px;
+                padding: 9px 28px;
+                color: $activeColor;
+                @include font(18px,Cabin-Regular,Tajawal-Medium,22px);
+                transition: all 0.2s ease-in-out;
+                &.solid-btn{
+                    border:2px solid $activeColor;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: $activeColor;
+                        color: $White;
+                    }
+                }
+                &.filled-btn{
+                    background-color: $White;
+                    &:hover{
+                        background-color: $activeColor;
+                        color: $White;
+                    }
+                }
+              
+            }
+        }
+        .language-btn-toggle{
+            color: $White;
+            text-decoration: none;
+            @include font(18px,Tajawal-Medium,Cabin-Medium,22px);
+        }
+    }
+// End NAV
+
+    .hero-container{
+        margin-top: 20px;
+        @include mediaQuery($xxl){
+        margin-top: 60px;
+        }
+        // Carousel Dots
+        .carousel-indicators{
+            @include rtl_value(left, 0 , auto);
+            @include rtl_value(right, auto , 0);
+            margin: 0;
+            bottom: -25px;
+            @include mediaQuery($md){
+                @include rtl_value(left, 0 , auto);
+                @include rtl_value(right, auto , 0);
+                margin: 0;
+            }
+            .dot{
+                background-color: $heavyBlue;
+                width: 21px;
+                height: 10px;
+                border-radius: 5px;
+                border: none;
+                &.active{
+                    width: 31px;
+                    background-color: $activeColor;
+
+                }
+            }
+        }
+        // Slider Content
+        .banner-title{
+            @include font(28px,Cabin-Bold,Tajawal-Bold,32px);
+            margin-bottom: 8px;
+            color: $White;
+            @include mediaQuery($md){
+                @include font(34px,Cabin-Bold,Tajawal-Bold,40px);
+            margin-bottom: 12x;
+            color: $White;
+            }
+
+            @include mediaQuery($xxl){
+            @include font(56px,Cabin-Bold,Tajawal-Bold,68px);
+            color: $White;
+            margin-bottom: 18px;
+        }
+        }
+        .banner-content{
+            @include font(18px,Cabin-Regular,Tajawal-Medium,28px);
+            color: $White;
+            margin-bottom: 12px;
+
+          @include mediaQuery($md){
+            @include font(24px,Cabin-Regular,Tajawal-Medium,38px);
+            color: $White;
+            margin-bottom: 22px;
+          }
+            @include mediaQuery($xxl){
+            @include font(22px,Cabin-Regular,Tajawal-Medium,28px);
+            color: $White;
+            margin-bottom: 36px;
+            }
+        }
+        // Read More BTN
+        .read-more{
+            @include font(14px,Cabin-Regular,Tajawal-Medium,18px);
+            padding: 6px 20px;
+            border: none;
+            outline: none;
+            border-radius: 28px;
+            background-color: $activeColor;
+            color: $White;
+            box-shadow: 0px 3px 6px #0000000F;
+
+            @include mediaQuery($md){
+                @include font(18px,Cabin-Regular,Tajawal-Medium,20px);
+            padding: 8px 30px;
+            border: none;
+            outline: none;
+            border-radius: 28px;
+            background-color: $activeColor;
+            color: $White;
+            box-shadow: 0px 3px 6px #0000000F;
+            }
+            @include mediaQuery($xxl){
+            border: none;
+            outline: none;
+            border-radius: 28px;
+            padding: 16px 58px;
+            color: $White;
+            background-color: $activeColor;
+            box-shadow: 0px 3px 6px #0000000F;
+            @include font(20px,Cabin-Regular,Tajawal-Medium,24px);
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                background-color: $heavyBlue;
+            }
+        }
+    }
+    }
+
+    // Features Boxes
+    .hero-features{
+        margin-top: 70px;
+        padding-bottom: 50px;
+        @include mediaQuery($md){
+        margin-top: 50px;
+        padding-bottom: 100px;
+        }
+        .features-boxes{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            z-index: 9999;
+            gap: 20px;
+            @include mediaQuery($md){
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                z-index: 9999;
+                gap: 10px;
+                    }
+         .feature-box{
+            background-color: $boxBg;
+                width: 120px;
+                height: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            @include mediaQuery($md){
+                background-color: $boxBg;
+                width: 200px;
+                height: 125px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            }
+
+            @include mediaQuery($xl){
+
+                background-color: $boxBg;
+                width: 240px;
+                height: 165px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            }
+            &.active , &:hover{
+                background-color: $secondaryColor;
+                .feature-icon{
+                    filter: brightness(0) saturate(100%) invert(1);
+                }
+            }
+            .feature-icon{
+                width: 35%;
+                @include mediaQuery($md){
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
+            &::after{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-top: 20px solid $primaryColor;
+                border-right: 20px solid transparent;
+                @include mediaQuery($md){
+                    
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border-top: 30px solid $primaryColor;
+                    border-right: 30px solid transparent;
+                }
+            }
+           
+
+         }
+        }
+    }
+}
+// Custom-show and Hide
+.custom-s-show{
+    @include font(18px,Tajawal-Medium,Cabin-Medium,22px);
+    display: block ;
+    @include mediaQuery($xxl){
+        display: none;
+    }
+}
+.custom-v-hide{
+    display: none !important;
+    @include mediaQuery($xxl){
+        @include font(18px,Tajawal-Medium,Cabin-Medium,22px);
+        display: block !important;
+    }
+}

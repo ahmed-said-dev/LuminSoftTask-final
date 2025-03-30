@@ -1,0 +1,535 @@
+@font-face {
+  font-family: "Tajawal-Medium";
+  src: url(../assets/fonts/ar/arabic-medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tajawal-Bold";
+  src: url(../assets/fonts/ar/arabic-bold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabin-Bold";
+  src: url(../assets/fonts/en/english-bold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabin-Medium";
+  src: url(../assets/fonts/en/english-medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabin-Regular";
+  src: url(../assets/fonts/en/english-regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.main-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #0055B8;
+}
+.main-section .background-pattern {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.main-section .navbar-brand {
+  margin: 0;
+}
+.main-section .navbar-brand .logo {
+  width: 106px;
+  height: 44px;
+}
+.main-section .navbar-nav {
+  justify-content: space-between;
+  gap: 25px;
+}
+.main-section .navbar-nav.ms-5s {
+  margin-left: 20px;
+  margin-right: 0;
+}
+[dir=rtl] .main-section .navbar-nav.ms-5s {
+  margin-left: 0;
+}
+:host-context([dir=rtl]) .main-section .navbar-nav.ms-5s {
+  margin-left: 0;
+}
+[dir=rtl] .main-section .navbar-nav.ms-5s {
+  margin-right: 20px;
+}
+:host-context([dir=rtl]) .main-section .navbar-nav.ms-5s {
+  margin-right: 20px;
+}
+@media (min-width: 1400px) {
+  .main-section .navbar-nav.ms-5s {
+    margin-left: 80px;
+    margin-right: 0;
+  }
+  [dir=rtl] .main-section .navbar-nav.ms-5s {
+    margin-left: 0;
+  }
+  :host-context([dir=rtl]) .main-section .navbar-nav.ms-5s {
+    margin-left: 0;
+  }
+  [dir=rtl] .main-section .navbar-nav.ms-5s {
+    margin-right: 80px;
+  }
+  :host-context([dir=rtl]) .main-section .navbar-nav.ms-5s {
+    margin-right: 80px;
+  }
+}
+.main-section .navbar-nav .nav-item .nav-link {
+  color: #0055B8;
+  position: relative;
+  padding: 10px 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Cabin-Medium", sans-serif;
+}
+@media (min-width: 1400px) {
+  .main-section .navbar-nav .nav-item .nav-link {
+    padding: 8px 0;
+    color: #fff;
+    position: relative;
+  }
+}
+[lang=ar] .main-section .navbar-nav .nav-item .nav-link {
+  font-family: "Tajawal-Medium", sans-serif;
+}
+.main-section .navbar-nav .nav-item .nav-link.active::after, .main-section .navbar-nav .nav-item .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  left: 0;
+  right: auto;
+  background-color: #00B2E2;
+}
+[dir=rtl] .main-section .navbar-nav .nav-item .nav-link.active::after, [dir=rtl] .main-section .navbar-nav .nav-item .nav-link:hover::after {
+  left: auto;
+}
+:host-context([dir=rtl]) .main-section .navbar-nav .nav-item .nav-link.active::after, :host-context([dir=rtl]) .main-section .navbar-nav .nav-item .nav-link:hover::after {
+  left: auto;
+}
+[dir=rtl] .main-section .navbar-nav .nav-item .nav-link.active::after, [dir=rtl] .main-section .navbar-nav .nav-item .nav-link:hover::after {
+  right: 0;
+}
+:host-context([dir=rtl]) .main-section .navbar-nav .nav-item .nav-link.active::after, :host-context([dir=rtl]) .main-section .navbar-nav .nav-item .nav-link:hover::after {
+  right: 0;
+}
+@media (min-width: 1400px) {
+  .main-section .navbar-nav .nav-item .nav-link.active::after, .main-section .navbar-nav .nav-item .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px;
+    left: 50%;
+    transform: translate(-50%);
+    right: auto;
+    background-color: #00B2E2;
+  }
+  [dir=rtl] .main-section .navbar-nav .nav-item .nav-link.active::after, [dir=rtl] .main-section .navbar-nav .nav-item .nav-link:hover::after {
+    left: auto;
+  }
+  :host-context([dir=rtl]) .main-section .navbar-nav .nav-item .nav-link.active::after, :host-context([dir=rtl]) .main-section .navbar-nav .nav-item .nav-link:hover::after {
+    left: auto;
+  }
+  [dir=rtl] .main-section .navbar-nav .nav-item .nav-link.active::after, [dir=rtl] .main-section .navbar-nav .nav-item .nav-link:hover::after {
+    right: 50%;
+    transform: translate(50%);
+  }
+  :host-context([dir=rtl]) .main-section .navbar-nav .nav-item .nav-link.active::after, :host-context([dir=rtl]) .main-section .navbar-nav .nav-item .nav-link:hover::after {
+    right: 50%;
+    transform: translate(50%);
+  }
+}
+.main-section .actions {
+  margin-top: 45px;
+}
+@media (min-width: 1400px) {
+  .main-section .actions {
+    margin-top: 0;
+  }
+}
+.main-section .actions .btns-actions button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 9px 28px;
+  color: #00B2E2;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Cabin-Medium", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+[lang=ar] .main-section .actions .btns-actions button {
+  font-family: "Tajawal-Medium", sans-serif;
+}
+.main-section .actions .btns-actions button.solid-btn {
+  border: 2px solid #00B2E2;
+  background-color: transparent;
+}
+.main-section .actions .btns-actions button.solid-btn:hover {
+  background-color: #00B2E2;
+  color: #FFFFFF;
+}
+.main-section .actions .btns-actions button.filled-btn {
+  background-color: #FFFFFF;
+}
+.main-section .actions .btns-actions button.filled-btn:hover {
+  background-color: #00B2E2;
+  color: #FFFFFF;
+}
+.main-section .actions .language-btn-toggle {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Tajawal-Medium", sans-serif;
+}
+[lang=ar] .main-section .actions .language-btn-toggle {
+  font-family: "Cabin-Medium", sans-serif;
+}
+.main-section .content-container {
+  margin-top: 20px;
+}
+@media (min-width: 1400px) {
+  .main-section .content-container {
+    margin-top: 60px;
+  }
+}
+.main-section .content-container .carousel-indicators {
+  left: 0;
+  right: auto;
+  margin: 0;
+  bottom: -25px;
+}
+[dir=rtl] .main-section .content-container .carousel-indicators {
+  left: auto;
+}
+:host-context([dir=rtl]) .main-section .content-container .carousel-indicators {
+  left: auto;
+}
+[dir=rtl] .main-section .content-container .carousel-indicators {
+  right: 0;
+}
+:host-context([dir=rtl]) .main-section .content-container .carousel-indicators {
+  right: 0;
+}
+@media (min-width: 768px) {
+  .main-section .content-container .carousel-indicators {
+    left: 0;
+    right: auto;
+    margin: 0;
+  }
+  [dir=rtl] .main-section .content-container .carousel-indicators {
+    left: auto;
+  }
+  :host-context([dir=rtl]) .main-section .content-container .carousel-indicators {
+    left: auto;
+  }
+  [dir=rtl] .main-section .content-container .carousel-indicators {
+    right: 0;
+  }
+  :host-context([dir=rtl]) .main-section .content-container .carousel-indicators {
+    right: 0;
+  }
+}
+.main-section .content-container .carousel-indicators .dot {
+  background-color: #00308C;
+  width: 21px;
+  height: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.main-section .content-container .carousel-indicators .dot.active {
+  width: 31px;
+  background-color: #00B2E2;
+}
+.main-section .content-container .section-title {
+  font-size: 28px;
+  line-height: 32px;
+  font-family: "Cabin", sans-serif;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+}
+[lang=ar] .main-section .content-container .section-title {
+  font-family: "Tajawal", sans-serif;
+}
+@media (min-width: 768px) {
+  .main-section .content-container .section-title {
+    font-size: 34px;
+    line-height: 40px;
+    font-family: "Cabin-Bold", sans-serif;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+  }
+  [lang=ar] .main-section .content-container .section-title {
+    font-family: "Tajawal-Bold", sans-serif;
+  }
+}
+@media (min-width: 1400px) {
+  .main-section .content-container .section-title {
+    font-size: 56px;
+    line-height: 68px;
+    font-family: "Cabin-Bold", sans-serif;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+  }
+  [lang=ar] .main-section .content-container .section-title {
+    font-family: "Tajawal-Bold", sans-serif;
+  }
+}
+.main-section .content-container .section-content {
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Cabin", sans-serif;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+[lang=ar] .main-section .content-container .section-content {
+  font-family: "Tajawal", sans-serif;
+}
+@media (min-width: 768px) {
+  .main-section .content-container .section-content {
+    font-size: 24px;
+    line-height: 38px;
+    font-family: "Cabin-Medium", sans-serif;
+    color: #FFFFFF;
+    margin-bottom: 22px;
+  }
+  [lang=ar] .main-section .content-container .section-content {
+    font-family: "Tajawal-Medium", sans-serif;
+  }
+}
+@media (min-width: 1400px) {
+  .main-section .content-container .section-content {
+    font-size: 22px;
+    line-height: 28px;
+    font-family: "Cabin-Medium", sans-serif;
+    color: #FFFFFF;
+    margin-bottom: 36px;
+  }
+  [lang=ar] .main-section .content-container .section-content {
+    font-family: "Tajawal-Medium", sans-serif;
+  }
+}
+.main-section .content-container .details-btn {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cabin", sans-serif;
+  padding: 6px 20px;
+  border: none;
+  outline: none;
+  border-radius: 28px;
+  background-color: #00B2E2;
+  color: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.0588235294);
+}
+[lang=ar] .main-section .content-container .details-btn {
+  font-family: "Tajawal", sans-serif;
+}
+@media (min-width: 768px) {
+  .main-section .content-container .details-btn {
+    font-size: 18px;
+    line-height: 20px;
+    font-family: "Cabin-Medium", sans-serif;
+    padding: 8px 30px;
+    border: none;
+    outline: none;
+    border-radius: 28px;
+    background-color: #00B2E2;
+    color: #FFFFFF;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.0588235294);
+  }
+  [lang=ar] .main-section .content-container .details-btn {
+    font-family: "Tajawal-Medium", sans-serif;
+  }
+}
+@media (min-width: 1400px) {
+  .main-section .content-container .details-btn {
+    border: none;
+    outline: none;
+    border-radius: 28px;
+    padding: 16px 58px;
+    color: #FFFFFF;
+    background-color: #00B2E2;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.0588235294);
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Cabin-Medium", sans-serif;
+    transition: all 0.2s ease-in-out;
+  }
+  [lang=ar] .main-section .content-container .details-btn {
+    font-family: "Tajawal-Medium", sans-serif;
+  }
+  .main-section .content-container .details-btn:hover {
+    background-color: #00308C;
+  }
+}
+.main-section .section-features {
+  margin-top: 70px;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .main-section .section-features {
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+}
+.main-section .section-features .feature-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 9999;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .main-section .section-features .feature-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 9999;
+    gap: 10px;
+  }
+}
+.main-section .section-features .feature-container .feature-item {
+  background-color: #EDF8FF;
+  width: 120px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 768px) {
+  .main-section .section-features .feature-container .feature-item {
+    background-color: #EDF8FF;
+    width: 200px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
+@media (min-width: 1200px) {
+  .main-section .section-features .feature-container .feature-item {
+    background-color: #EDF8FF;
+    width: 240px;
+    height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
+.main-section .section-features .feature-container .feature-item.active, .main-section .section-features .feature-container .feature-item:hover {
+  background-color: #0ED1B3;
+}
+.main-section .section-features .feature-container .feature-item.active .feature-icon, .main-section .section-features .feature-container .feature-item:hover .feature-icon {
+  filter: brightness(0) saturate(100%) invert(1);
+}
+.main-section .section-features .feature-container .feature-item .feature-icon {
+  width: 35%;
+}
+@media (min-width: 768px) {
+  .main-section .section-features .feature-container .feature-item .feature-icon {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+}
+.main-section .section-features .feature-container .feature-item::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 20px solid #0055B8;
+  border-right: 20px solid transparent;
+}
+@media (min-width: 768px) {
+  .main-section .section-features .feature-container .feature-item::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #0055B8;
+    border-right: 30px solid transparent;
+  }
+}
+
+.custom-s-show {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Tajawal-Medium", sans-serif;
+  display: block;
+}
+[lang=ar] .custom-s-show {
+  font-family: "Cabin-Medium", sans-serif;
+}
+@media (min-width: 1400px) {
+  .custom-s-show {
+    display: none;
+  }
+}
+
+.custom-v-hide {
+  display: none !important;
+}
+@media (min-width: 1400px) {
+  .custom-v-hide {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "Tajawal-Medium", sans-serif;
+    display: block !important;
+  }
+  [lang=ar] .custom-v-hide {
+    font-family: "Cabin-Medium", sans-serif;
+  }
+}
+/*# sourceMappingURL=style.css.map */

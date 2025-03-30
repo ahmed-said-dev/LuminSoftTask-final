@@ -1,0 +1,47 @@
+@mixin mediaQuery($size) {
+    @media (min-width: #{$size}) {
+      @content;
+    }
+  }
+
+// Font
+@mixin font($fontSize, $englishFont, $arabicFont, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+
+  // Default (English)
+  font-family: $englishFont, sans-serif;
+
+  // Arabic Support
+  [lang="ar"] & {
+      font-family: $arabicFont, sans-serif;
+  }
+}
+
+
+// Direction
+// Key
+@mixin rtl_key($property,$ltr-value, $rtl-value,$unit) {
+    #{$property}#{$ltr-value}: $unit;
+  
+    [dir="rtl"] & {
+      #{$property}#{$rtl-value}: $unit;
+    }
+    :host-context([dir="rtl"]) & {
+      #{$property}#{$rtl-value}: $unit;
+    }
+  
+  }
+
+  // Value
+@mixin rtl_value($property, $ltr-value, $rtl-value) {
+    #{$property}: $ltr-value;
+  
+    [dir="rtl"] & {
+      #{$property}: $rtl-value;
+    }
+    :host-context([dir="rtl"]) & {
+      #{$property}: $rtl-value;
+    }
+  
+  }
